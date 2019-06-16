@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Data:"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:layout_margin="15dp"
+        />
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/enter_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <Button
+            android:id="@+id/submit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Led Status"
+        android:textSize="20dp"
+        android:layout_below="@id/linear_layout"
+        android:onClick="display"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/display_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text2"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:textColor="#312D2D"
+        android:background="@drawable/round_cornor"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/display_value"
+        android:src="@drawable/iot"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
